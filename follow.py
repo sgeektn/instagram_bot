@@ -34,7 +34,9 @@ def follow_instagram_account(driver,account):
     time.sleep(2)
 
 options = webdriver.ChromeOptions()
-options.add_argument("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:94.0) Gecko/20100101 Firefox/94.0")
+# headless mode
+options.add_argument('headless')
+options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:94.0) Gecko/20100101 Firefox/94.0")
 driver = webdriver.Chrome(chrome_options=options)
 
 print(login_instagram(driver,'sami_fakhfakh','zatla123birra'))
