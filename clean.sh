@@ -5,7 +5,7 @@ result=$1
 
 blacklist=`cat blacklist.txt`
 
-wc -l $result
+lines=`wc -l $result`
 
 #resultdata=`cat $result`
 
@@ -28,4 +28,7 @@ vi -c ":%g/^$/d" -c ":wq" $result
 #mv $result.tmp $result
 #echo $resultdata #> $result
 
+
+
+echo $lines
 wc -l $result
